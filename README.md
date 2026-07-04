@@ -28,3 +28,23 @@ The relational schema is built on strict multi-tenant normalization rules:
 <p align="center">
   <img src="DB_ER.png" width="900">
 </p>
+
+## 🛠️ Local Installation & Execution Guide
+
+Follow these sequential steps to configure, seed, and spin up the entire distributed system locally.
+
+### 1. System Prerequisites
+Ensure you have the following environments installed and configured on your machine:
+* **Python:** Version 3.13 or higher
+* **Database:** PostgreSQL (v15+) cluster running locally or accessible via a remote connection string
+
+### 2. Environment Setup
+Create a `.env` file in the project's root directory and populate it with your local PostgreSQL configurations and application security keys:
+
+```env
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=your_secure_password
+DB_NAME=apex_scheduler_db
+JWT_SECRET_KEY=your_custom_jwt_secret_signing_key_here
