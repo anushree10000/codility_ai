@@ -1,6 +1,6 @@
 # ApexScheduler: Enterprise Multi-Tenant Job Engine
 
-A high-concurrency, horizontally scalable distributed job scheduler engineered from scratch for multi-tenant background processing. Built with FastAPI and PostgreSQL, this system implements advanced row-level locking patterns to guarantee strict task isolation and zero-race-condition queue pulling under heavy concurrent loads.
+A high-concurrency, horizontally scalable distributed job scheduler engineered from scratch for multi-tenant background processing. Built with FastAPI and MySQL, this system implements advanced row-level locking patterns to guarantee strict task isolation and zero-race-condition queue pulling under heavy concurrent loads.
 
 ---
 
@@ -9,7 +9,7 @@ A high-concurrency, horizontally scalable distributed job scheduler engineered f
 The core architecture decouples ingestion from execution to ensure high throughput and horizontal scalability:
 
 - **API Ingestion Nodes:** Stateless FastAPI instances handle tenant authentication, job submission validation, and real-time analytical reporting.
-- **Database Layer:** A centralized PostgreSQL database utilizing optimized `JSONB` indices for flexible task payloads and status indexing.
+- **Database Layer:** A centralized MySQL database utilizing optimized `JSONB` indices for flexible task payloads and status indexing.
 - **Worker Node Cluster:** Independent background worker processes running concurrent execution loops, capable of scaling dynamically to meet queue demands.
 
 <p align="center">
@@ -36,10 +36,10 @@ Follow these sequential steps to configure, seed, and spin up the entire distrib
 ### 1. System Prerequisites
 Ensure you have the following environments installed and configured on your machine:
 * **Python:** Version 3.13 or higher
-* **Database:** PostgreSQL (v15+) cluster running locally or accessible via a remote connection string
+* **Database:** MySQL (v15+) cluster running locally or accessible via a remote connection string
 
 ### 2. Environment Setup
-Create a `.env` file in the project's root directory and populate it with your local PostgreSQL configurations and application security keys:
+Create a `.env` file in the project's root directory and populate it with your local MySQL configurations and application security keys:
 
 ```env
 DB_HOST=localhost
