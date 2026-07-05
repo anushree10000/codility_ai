@@ -18,7 +18,7 @@ from app.models.worker import Worker
 from app.models.worker_heartbeat import WorkerHeartbeat
 from app.models.job_execution import JobExecution
 from app.models.dead_letter_queue import DeadLetterQueue
-from app.repositories import worker_repo, job_repo, queue_repo
+from app.repo import worker_repo, job_repo, queue_repo
 from app.utils.retry import calculate_retry_delay
 from app.core.constants import WorkerStatus, JobStatus, ExecutionStatus
 import psutil
