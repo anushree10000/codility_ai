@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.schemas.auth import UserCreate, UserLogin, Token
 from app.models.user import User
-from app.repositories import user_repo
+from app.repo import user_repo
 from app.core.security import hash_password, verify_password, create_access_token, create_refresh_token
 from app.core.exceptions import ConflictException, UnauthorizedException
 import uuid

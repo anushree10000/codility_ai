@@ -3,7 +3,7 @@ from app.schemas.project import OrganizationCreate, ProjectCreate
 from app.models.organization import Organization
 from app.models.org_member import OrgMember
 from app.models.project import Project
-from app.repositories import org_repo, project_repo
+from app.repo import org_repo, project_repo
 from app.core.exceptions import ConflictException, NotFoundException
 import uuid
 from datetime import datetime, timezone

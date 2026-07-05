@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.schemas.queue import QueueCreate, QueueUpdate, RetryPolicyCreate
 from app.models.queue import Queue
 from app.models.retry_policy import RetryPolicy
-from app.repositories import queue_repo
+from app.repo import queue_repo
 from app.core.exceptions import ConflictException, NotFoundException
 import uuid
 from datetime import datetime, timezone

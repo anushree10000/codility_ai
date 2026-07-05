@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.schemas.job import JobCreate
 from app.models.job import Job
 from app.models.dead_letter_queue import DeadLetterQueue
-from app.repositories import job_repo, queue_repo
+from app.repo import job_repo, queue_repo
 from app.core.exceptions import NotFoundException, BadRequestException
 from app.core.constants import JobStatus
 import uuid

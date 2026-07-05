@@ -3,7 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.schemas.project import OrganizationCreate, OrganizationResponse, ProjectCreate, ProjectResponse
 from app.services import project_service
-from app.repositories import org_repo, project_repo
+from app.repo import org_repo, project_repo
 from app.models.user import User
 from app.dependencies import get_current_user
 from app.core.exceptions import ForbiddenException

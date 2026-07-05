@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.schemas.worker import WorkerResponse, WorkerHeartbeatResponse
-from app.repositories import worker_repo
+from app.repo import worker_repo
 from app.models.user import User
 from app.dependencies import get_current_user
 from app.core.exceptions import NotFoundException
